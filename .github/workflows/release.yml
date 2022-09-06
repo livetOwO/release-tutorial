@@ -1,0 +1,13 @@
+name: release
+on:
+    release:
+      types:
+        - published
+
+jobs:
+  releaseToDeploy:
+    runs-on: ubuntu-latest
+    name: "Release to Deploy"
+
+    steps:
+      - uses: actions/checkout@v2

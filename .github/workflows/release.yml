@@ -17,7 +17,7 @@ jobs:
 
   staging:
     runs-on: ubuntu-latest
-    name: "Release to Deploy"
+    name: "Release to Deploy staging"
     environment: staging
 
     steps:
@@ -27,8 +27,8 @@ jobs:
 
   product:
     runs-on: ubuntu-latest
-    name: "Release to Deploy"
-    environment:   product
+    name: "Release to Deploy production"
+    environment: product
     steps:
       - uses: actions/checkout@v2
       - name: echo test

@@ -5,11 +5,32 @@ on:
         - published
 
 jobs:
-  releaseToDeploy:
+  development:
     runs-on: ubuntu-latest
     name: "Release to Deploy"
+    environment: dev
 
     steps:
       - uses: actions/checkout@v2
       - name: echo test
         run: echo test
+
+  staging:
+    runs-on: ubuntu-latest
+    name: "Release to Deploy"
+    environment: staging
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: echo test
+        run: echo staging
+
+  product:
+    runs-on: ubuntu-latest
+    name: "Release to Deploy"
+    environment:   product
+    steps:
+      - uses: actions/checkout@v2
+      - name: echo test
+        run: echo production
+

@@ -7,6 +7,6 @@ jobs:
     strategy:
       matrix:
         target: [dev, stage, prod]
-    uses: ./.github/workflows/deploy/deploy.yml
+    uses: ./.github/workflows/deploy.yml
     with:
       target: ${{ matrix.target }}

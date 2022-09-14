@@ -7,11 +7,12 @@ on:
         required: true
         type: string
 
+env:
+  target: ${{ inputs.target }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      target: ${{ inputs.target }}
     name: "deploy to $target"
     environment: ${{ inputs.target }}
     steps:

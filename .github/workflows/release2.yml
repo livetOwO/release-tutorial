@@ -9,4 +9,4 @@ jobs:
         target: [dev, stage, prod]
     uses: ./.github/workflows/deploy.yml
     with:
-      target: ${{ matrix.target }}
+      target: ${{ matrix.targets || 'dev' }}

@@ -10,7 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: "Release to Deploy" ${{ inputs.target }}
+    name: "Release to Deploy"
     environment: ${{ inputs.target }}
     steps:
       - uses: actions/checkout@v2

@@ -1,5 +1,6 @@
 name: release2
 on:
+  tag:
   workflow_dispatch:
 
 jobs:

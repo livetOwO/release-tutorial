@@ -1,14 +1,12 @@
 name: release2
 on:
-  push:
-    tags:
-      - v*
+  workflow_dispatch:
 
 jobs:
   ReuseableMatrixJobForDeployment:
     strategy:
       matrix:
         target: [dev, stage, prod]
-    uses: .github/workflows/deploy.yml@main
+    uses: ./.github/workflows/deploy.yml@main
     with:
       target: ${{ matrix.target }}
